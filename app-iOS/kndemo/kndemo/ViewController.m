@@ -22,13 +22,22 @@
     [self.view addSubview:self.tips];
 
     self.tips.text = [KNCommonKt createApplicationScreenMessageTips:@"haha"];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onClick)];
+    [self.tips addGestureRecognizer:tap];
 }
 
 - (UILabel *)tips {
     if (!_tips) {
         _tips = [[UILabel alloc] initWithFrame:CGRectMake(40, 80, 200, 30)];
+        _tips.userInteractionEnabled = YES;
     }
     return _tips;
+}
+
+- (void)onClick {
+    [KNCommonKt talkWithCallbackSay:^{
+        self.tips.text = @"get out";
+    }];
 }
 
 @end

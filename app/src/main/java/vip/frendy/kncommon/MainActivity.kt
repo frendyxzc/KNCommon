@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import vip.frendy.common.createApplicationScreenMessage
+import vip.frendy.common.talkWithCallback
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,5 +13,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         tv_tips.text = createApplicationScreenMessage("hehe")
+        tv_tips.setOnClickListener {
+            talkWithCallback {
+                tv_tips.text = "come on"
+            }
+        }
     }
 }
