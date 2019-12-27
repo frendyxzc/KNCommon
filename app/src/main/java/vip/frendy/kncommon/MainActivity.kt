@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity() {
 
         tv_tips.text = createApplicationScreenMessage("hehe")
         tv_tips.setOnClickListener {
-            talkWithCallback {
-                tv_tips.text = "come on"
-            }
+            talkWithCallback("android", say = {
+                tv_tips.text = "$it come on"
+            })
         }
     }
 }

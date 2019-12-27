@@ -35,8 +35,8 @@
 }
 
 - (void)onClick {
-    [KNCommonKt talkWithCallbackSay:^{
-        self.tips.text = @"get out";
+    [KNCommonKt talkWithCallbackName:@"iOS" say:^(NSString * _Nonnull it) {
+        self.tips.text = [NSString stringWithFormat:@"%@ get out", it];
     }];
 }
 
