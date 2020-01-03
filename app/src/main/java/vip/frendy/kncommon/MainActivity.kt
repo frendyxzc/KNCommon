@@ -3,10 +3,7 @@ package vip.frendy.kncommon
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
-import vip.frendy.common.Helper
-import vip.frendy.common.IHelper
-import vip.frendy.common.createApplicationScreenMessage
-import vip.frendy.common.talkWithCallback
+import vip.frendy.common.*
 
 class MainActivity : AppCompatActivity(), IHelper {
 
@@ -35,6 +32,8 @@ class MainActivity : AppCompatActivity(), IHelper {
 
     override fun result(i: Int) {
         tv_tips_2.text = "get result : $i"
+
+        Manager.log("thank you")
     }
 
 }

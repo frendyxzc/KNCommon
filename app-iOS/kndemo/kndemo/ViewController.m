@@ -75,6 +75,8 @@
 
 - (void)resultI:(int32_t)i {
     self.tips2.text = [NSString stringWithFormat:@"get result : %d", i];
+
+    [KNManager.manager logMsg:@"thanks"];
 }
 
 @end
