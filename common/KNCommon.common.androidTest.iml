@@ -5,9 +5,9 @@
       <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false" isTestModule="true" externalProjectId=":common">
         <dependsOnModuleNames>common_commonTest</dependsOnModuleNames>
         <sourceSets>
-          <sourceSet>KNCommon.common.commonTest</sourceSet>
-          <sourceSet>KNCommon.common.androidMain</sourceSet>
           <sourceSet>KNCommon.common.commonMain</sourceSet>
+          <sourceSet>KNCommon.common.androidMain</sourceSet>
+          <sourceSet>KNCommon.common.commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <externalSystemTestTasks>androidTest|:common:androidTest|android</externalSystemTestTasks>

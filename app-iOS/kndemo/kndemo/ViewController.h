@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KN/KN.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<KNIHelper>
 
 
 @end
